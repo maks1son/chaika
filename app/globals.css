@@ -1,26 +1,64 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F4F1EA;
+  --foreground: #1A2426;
+
+  /* Brand palette — Чайка */
+  --petrol-deep: #0C353D;
+  --petrol-night: #0A2A30;
+  --teal: #1E7E8C;
+  --cyan: #2FB6C9;
+  --stone: #CFC6B8;
+  --ivory: #F4F1EA;
+  --graphite: #1A2426;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-petrol-deep: #0C353D;
+  --color-petrol-night: #0A2A30;
+  --color-teal: #1E7E8C;
+  --color-cyan: #2FB6C9;
+  --color-stone: #CFC6B8;
+  --color-ivory: #F4F1EA;
+  --color-graphite: #1A2426;
+
+  --font-display: var(--font-cormorant);
+  --font-body: var(--font-manrope);
+
+  --animate-marquee: marquee 30s linear infinite;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-manrope), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle paper grain on light sections */
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+::selection {
+  background: var(--cyan);
+  color: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
 }
