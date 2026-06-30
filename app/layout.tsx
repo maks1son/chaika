@@ -7,18 +7,20 @@ const cormorant = Cormorant_Garamond({
   subsets: ["latin", "cyrillic"],
   weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
+  display: "swap",
 });
 
 const manrope = Manrope({
   variable: "--font-manrope",
   subsets: ["latin", "cyrillic"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Гостиница «Чайка» — Сызрань · номера в центре города",
+  title: "Гостиница «Чайка» в Сызрани | Номера в центре города",
   description:
-    "«Чайка» — гостиница в историческом центре Сызрани. Комфортабельные номера, бесплатный Wi-Fi, закрытая парковка, кафе. Работаем 24/7. Бронирование от 3700 ₽.",
+    "Гостиница «Чайка» в центре Сызрани: номера от 3700 руб., круглосуточное заселение, кафе, Wi-Fi и закрытая парковка. Ул. Ульяновская, 57.",
 };
 
 export default function RootLayout({
@@ -27,13 +29,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="ru"
-      className={`${cormorant.variable} ${manrope.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col bg-ivory text-graphite">
-        {children}
-      </body>
+    <html lang="ru" className={`${cormorant.variable} ${manrope.variable}`}>
+      <body>{children}</body>
     </html>
   );
 }
