@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { TextReveal } from "@/components/ui/cascade-text";
 import {
   Bath,
   BedDouble,
@@ -74,7 +73,7 @@ const rooms = [
     name: "Премиум",
     price: "5500",
     area: "32 м2",
-    image: assetPath("/generated/chaika-room-comfort.png"),
+    image: assetPath("/generated/chaika-room-twin.png"),
     text: "Улучшенный номер для пары или командировки, когда нужен запас пространства.",
     tags: ["king size", "душ", "мини-бар"],
   },
@@ -82,7 +81,7 @@ const rooms = [
     name: "Комфорт",
     price: "3700",
     area: "20 м2",
-    image: assetPath("/generated/chaika-cafe.png"),
+    image: assetPath("/generated/chaika-room-comfort.png"),
     text: "Аккуратный номер для спокойной ночевки в центре города без лишнего шума.",
     tags: ["душ", "TV", "фен"],
   },
@@ -134,22 +133,15 @@ export default function Home() {
 function Header() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4">
-      <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between rounded-[28px] border border-white/55 bg-paper/88 px-4 shadow-[0_18px_60px_rgba(37,39,35,0.10)] backdrop-blur-xl md:px-6">
-        <a href="#top" className="flex items-center gap-3" aria-label="Чайка, на главную">
-          <span className="grid h-9 w-9 place-items-center rounded-full bg-ink text-paper">
-            <span className="font-display text-xl italic leading-none">Ч</span>
+      <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between rounded-[28px] border border-white/70 bg-white/88 px-4 shadow-[0_18px_60px_rgba(47,127,182,0.12)] backdrop-blur-xl md:px-6">
+        <a href="#top" className="flex items-center gap-2" aria-label="Гостиница Чайка, на главную">
+          <span className="text-sm font-bold text-ink md:text-base">
+            Гостиница «Чайка»
           </span>
-          <TextReveal
-            as="span"
-            text="ЧАЙКА"
-            fontSize="1.5rem"
-            staggerDelay={18}
-            duration={220}
-            color="var(--ink)"
-            hoverColor="var(--accent)"
-            className="font-display tracking-[0.12em]"
-            style={{ padding: 0, fontWeight: 600 }}
-          />
+          <span className="hidden h-1.5 w-1.5 rounded-full bg-accent md:block" aria-hidden="true" />
+          <span className="hidden text-sm font-semibold text-muted md:inline">
+            центр Сызрани
+          </span>
         </a>
 
         <div className="hidden items-center gap-7 lg:flex">
@@ -166,7 +158,7 @@ function Header() {
 
         <a
           href="tel:+79372390022"
-          className="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-accent px-5 text-sm font-bold text-white shadow-[0_12px_24px_rgba(232,111,47,0.24)] transition hover:bg-accent-dark active:translate-y-px"
+          className="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-accent px-5 text-sm font-bold text-white shadow-[0_12px_24px_rgba(75,159,216,0.22)] transition hover:bg-accent-dark active:translate-y-px"
         >
           <Phone className="h-4 w-4" />
           <span className="hidden sm:inline">8-937-239-00-22</span>
@@ -195,7 +187,7 @@ function Hero() {
             sizes="(min-width: 1024px) 50vw, 100vw"
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(28,29,26,0.12),rgba(28,29,26,0.78))]" />
+          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(31,41,51,0.04),rgba(31,41,51,0.68))]" />
           <div className="relative max-w-2xl">
             <p className="mb-5 inline-flex rounded-full bg-white/16 px-4 py-2 text-sm font-semibold backdrop-blur">
               Сызрань, ул. Ульяновская, 57
@@ -387,7 +379,7 @@ function Rooms() {
                 </div>
                 <a
                   href="tel:+79372390022"
-                  className="mt-7 inline-flex h-12 w-full items-center justify-center rounded-full bg-ink px-6 text-sm font-bold text-white transition hover:bg-accent active:translate-y-px"
+                  className="mt-7 inline-flex h-12 w-full items-center justify-center rounded-full bg-accent px-6 text-sm font-bold text-white transition hover:bg-accent-dark active:translate-y-px"
                 >
                   Забронировать
                 </a>
@@ -555,15 +547,15 @@ function Contact({
 function Footer() {
   return (
     <footer className="bg-paper px-4 pb-8">
-      <div className="mx-auto flex max-w-7xl flex-col gap-5 rounded-[36px] border border-line bg-ink p-7 text-white md:flex-row md:items-center md:justify-between md:p-8">
+      <div className="mx-auto flex max-w-7xl flex-col gap-5 rounded-[36px] border border-line bg-white p-7 text-ink shadow-soft md:flex-row md:items-center md:justify-between md:p-8">
         <div>
-          <div className="font-display text-3xl font-semibold tracking-[0.12em]">ЧАЙКА</div>
-          <p className="mt-2 max-w-md text-sm leading-6 text-white/58">
+          <div className="text-base font-bold">Гостиница «Чайка»</div>
+          <p className="mt-2 max-w-md text-sm leading-6 text-muted">
             Городская гостиница в центре Сызрани. Ульяновская, 57. Работаем круглосуточно.
           </p>
         </div>
-        <div className="flex flex-col gap-2 text-sm text-white/70 sm:flex-row sm:items-center sm:gap-5">
-          <a href="tel:+79372390022" className="font-bold text-white hover:text-accent">
+        <div className="flex flex-col gap-2 text-sm text-muted sm:flex-row sm:items-center sm:gap-5">
+          <a href="tel:+79372390022" className="font-bold text-ink hover:text-accent">
             8-937-239-00-22
           </a>
           <a href="mailto:chaika-otel@mail.ru" className="hover:text-accent">
