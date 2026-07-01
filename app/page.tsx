@@ -133,12 +133,12 @@ export default function Home() {
 function Header() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4">
-      <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between rounded-[28px] border border-white/70 bg-white/88 px-4 shadow-[0_18px_60px_rgba(47,127,182,0.12)] backdrop-blur-xl md:px-6">
+      <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between rounded-[4px] border border-white/70 bg-white/88 px-4 shadow-[0_18px_60px_rgba(47,127,182,0.12)] backdrop-blur-xl md:px-6">
         <a href="#top" className="flex items-center gap-2" aria-label="Гостиница Чайка, на главную">
           <span className="text-sm font-bold text-ink md:text-base">
             Гостиница «Чайка»
           </span>
-          <span className="hidden h-1.5 w-1.5 rounded-full bg-accent md:block" aria-hidden="true" />
+          <span className="hidden h-1.5 w-1.5 rounded-[2px] bg-accent md:block" aria-hidden="true" />
           <span className="hidden text-sm font-semibold text-muted md:inline">
             центр Сызрани
           </span>
@@ -158,7 +158,7 @@ function Header() {
 
         <a
           href="tel:+79372390022"
-          className="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-accent px-5 text-sm font-bold text-white shadow-[0_12px_24px_rgba(75,159,216,0.22)] transition hover:bg-accent-dark active:translate-y-px"
+          className="inline-flex h-11 items-center justify-center gap-2 rounded-[4px] bg-accent px-5 text-sm font-bold text-white shadow-[0_12px_24px_rgba(75,159,216,0.22)] transition hover:bg-accent-dark active:translate-y-px"
         >
           <Phone className="h-4 w-4" />
           <span className="hidden sm:inline">8-937-239-00-22</span>
@@ -177,7 +177,7 @@ function Hero() {
           initial={{ opacity: 0, y: 22 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease }}
-          className="relative flex min-h-[650px] flex-col justify-end overflow-hidden rounded-[36px] bg-ink p-6 text-white md:p-10"
+          className="relative flex min-h-[650px] flex-col justify-end overflow-hidden rounded-[4px] bg-ink p-6 text-white md:p-10"
         >
           <Image
             src={assetPath("/generated/chaika-facade.png")}
@@ -189,7 +189,7 @@ function Hero() {
           />
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(31,41,51,0.04),rgba(31,41,51,0.68))]" />
           <div className="relative max-w-2xl">
-            <p className="mb-5 inline-flex rounded-full bg-white/16 px-4 py-2 text-sm font-semibold backdrop-blur">
+            <p className="mb-5 inline-flex rounded-[4px] bg-white/16 px-4 py-2 text-sm font-semibold backdrop-blur">
               Сызрань, ул. Ульяновская, 57
             </p>
             <h1 className="font-display text-[clamp(3.1rem,7.4vw,7.2rem)] font-medium leading-[0.94] tracking-[-0.02em]">
@@ -206,11 +206,11 @@ function Hero() {
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease, delay: 0.08 }}
-            className="rounded-[36px] border border-line bg-white p-6 shadow-soft md:p-8"
+            className="rounded-[4px] border border-line bg-white p-6 shadow-soft md:p-8"
           >
             <div className="grid grid-cols-2 gap-4">
               {heroStats.map((item) => (
-                <div key={item.label} className="rounded-[24px] bg-paper px-5 py-5">
+                <div key={item.label} className="rounded-[4px] bg-paper px-5 py-5">
                   <div className="font-display text-4xl font-semibold leading-none text-ink">
                     {item.value}
                   </div>
@@ -224,7 +224,7 @@ function Hero() {
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease, delay: 0.14 }}
-            className="rounded-[36px] border border-line bg-white p-6 shadow-soft md:p-8"
+            className="rounded-[4px] border border-line bg-white p-6 shadow-soft md:p-8"
           >
             <div className="flex items-center gap-3 text-sm font-bold text-accent">
               <CalendarDays className="h-5 w-5" />
@@ -239,14 +239,14 @@ function Hero() {
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <a
                 href="tel:+79372390022"
-                className="inline-flex h-13 items-center justify-center gap-2 rounded-full bg-accent px-7 text-sm font-bold text-white transition hover:bg-accent-dark active:translate-y-px"
+                className="inline-flex h-13 items-center justify-center gap-2 rounded-[4px] bg-accent px-7 text-sm font-bold text-white transition hover:bg-accent-dark active:translate-y-px"
               >
                 <Phone className="h-4 w-4" />
                 Позвонить
               </a>
               <a
                 href="#rooms"
-                className="inline-flex h-13 items-center justify-center rounded-full border border-ink/18 px-7 text-sm font-bold text-ink transition hover:border-ink hover:bg-ink hover:text-white active:translate-y-px"
+                className="inline-flex h-13 items-center justify-center rounded-[4px] border border-ink/18 px-7 text-sm font-bold text-ink transition hover:border-ink hover:bg-ink hover:text-white active:translate-y-px"
               >
                 Смотреть номера
               </a>
@@ -257,7 +257,7 @@ function Hero() {
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease, delay: 0.2 }}
-            className="relative min-h-[220px] overflow-hidden rounded-[36px] border border-line bg-white shadow-soft"
+            className="relative min-h-[220px] overflow-hidden rounded-[4px] border border-line bg-white shadow-soft"
           >
             <Image
               src={assetPath("/generated/chaika-map.png")}
@@ -280,7 +280,7 @@ function Proof() {
         {proofItems.map((item) => (
           <article
             key={item.title}
-            className="rounded-[28px] border border-line bg-white p-6"
+            className="rounded-[4px] border border-line bg-white p-6"
           >
             <item.icon className="h-6 w-6 text-accent" />
             <h3 className="mt-5 text-lg font-bold text-ink">{item.title}</h3>
@@ -303,7 +303,7 @@ function About() {
           </h2>
         </div>
         <div className="grid gap-5 md:grid-cols-[0.95fr_1.05fr]">
-          <div className="relative min-h-[360px] overflow-hidden rounded-[36px] border border-line bg-white shadow-soft">
+          <div className="relative min-h-[360px] overflow-hidden rounded-[4px] border border-line bg-white shadow-soft">
             <Image
               src={assetPath("/generated/chaika-room-premium.png")}
               alt="Светлый номер гостиницы Чайка"
@@ -312,7 +312,7 @@ function About() {
               className="object-cover"
             />
           </div>
-          <div className="rounded-[36px] border border-line bg-white p-7 shadow-soft md:p-8">
+          <div className="rounded-[4px] border border-line bg-white p-7 shadow-soft md:p-8">
             <p className="leading-7 text-muted">
               «Чайка» находится в центральной части Сызрани. Это важное отличие: сайт не должен обещать отдых на берегу. Его задача честно продать удобство города, спокойный сон, парковку, кафе и круглосуточное заселение.
             </p>
@@ -345,7 +345,7 @@ function Rooms() {
           {rooms.map((room) => (
             <article
               key={room.name}
-              className="group overflow-hidden rounded-[36px] border border-line bg-white shadow-soft"
+              className="group overflow-hidden rounded-[4px] border border-line bg-white shadow-soft"
             >
               <div className="relative h-72 overflow-hidden">
                 <Image
@@ -372,14 +372,14 @@ function Rooms() {
                 <p className="mt-5 min-h-18 leading-7 text-muted">{room.text}</p>
                 <div className="mt-6 flex flex-wrap gap-2">
                   {room.tags.map((tag) => (
-                    <span key={tag} className="rounded-full bg-paper px-3 py-1.5 text-xs font-bold text-ink/70">
+                    <span key={tag} className="rounded-[4px] bg-paper px-3 py-1.5 text-xs font-bold text-ink/70">
                       {tag}
                     </span>
                   ))}
                 </div>
                 <a
                   href="tel:+79372390022"
-                  className="mt-7 inline-flex h-12 w-full items-center justify-center rounded-full bg-accent px-6 text-sm font-bold text-white transition hover:bg-accent-dark active:translate-y-px"
+                  className="mt-7 inline-flex h-12 w-full items-center justify-center rounded-[4px] bg-accent px-6 text-sm font-bold text-white transition hover:bg-accent-dark active:translate-y-px"
                 >
                   Забронировать
                 </a>
@@ -405,7 +405,7 @@ function Service() {
   return (
     <section id="service" className="bg-paper px-4 py-20 md:py-28">
       <div className="mx-auto grid max-w-7xl gap-5 lg:grid-cols-[1.05fr_0.95fr]">
-        <div className="relative min-h-[560px] overflow-hidden rounded-[36px] border border-line bg-white shadow-soft">
+        <div className="relative min-h-[560px] overflow-hidden rounded-[4px] border border-line bg-white shadow-soft">
           <Image
             src={assetPath("/generated/chaika-cafe.png")}
             alt="Кафе при городской гостинице Чайка"
@@ -414,7 +414,7 @@ function Service() {
             className="object-cover"
           />
         </div>
-        <div className="rounded-[36px] border border-line bg-white p-7 shadow-soft md:p-10">
+        <div className="rounded-[4px] border border-line bg-white p-7 shadow-soft md:p-10">
           <p className="text-sm font-bold text-accent">Сервис</p>
           <h2 className="mt-4 font-display text-[clamp(2.5rem,4.4vw,5rem)] font-medium leading-none tracking-[-0.02em] text-ink">
             Все нужное без лишней театральности
@@ -424,8 +424,8 @@ function Service() {
           </p>
           <div className="mt-9 grid gap-3">
             {list.map((item) => (
-              <div key={item.label} className="flex items-center gap-4 rounded-[24px] bg-paper p-4">
-                <span className="grid h-11 w-11 place-items-center rounded-full bg-white text-accent">
+              <div key={item.label} className="flex items-center gap-4 rounded-[4px] bg-paper p-4">
+                <span className="grid h-11 w-11 place-items-center rounded-[4px] bg-white text-accent">
                   <item.icon className="h-5 w-5" />
                 </span>
                 <span className="font-bold text-ink">{item.label}</span>
@@ -458,7 +458,7 @@ function Reviews() {
           </div>
           <div className="grid gap-4 md:grid-cols-3">
             {reviews.map((review) => (
-              <article key={review.name} className="rounded-[28px] border border-line bg-white p-6 shadow-soft">
+              <article key={review.name} className="rounded-[4px] border border-line bg-white p-6 shadow-soft">
                 <p className="text-lg leading-7 text-ink">{review.text}</p>
                 <div className="mt-7 border-t border-line pt-5">
                   <div className="font-bold text-ink">{review.name}</div>
@@ -477,7 +477,7 @@ function Contacts() {
   return (
     <section id="contacts" className="bg-paper px-4 pb-20 pt-10 md:pb-28">
       <div className="mx-auto grid max-w-7xl gap-5 lg:grid-cols-[0.9fr_1.1fr]">
-        <div className="rounded-[36px] border border-line bg-white p-7 shadow-soft md:p-10">
+        <div className="rounded-[4px] border border-line bg-white p-7 shadow-soft md:p-10">
           <p className="text-sm font-bold text-accent">Контакты</p>
           <h2 className="mt-4 font-display text-[clamp(2.5rem,4.5vw,5rem)] font-medium leading-none tracking-[-0.02em] text-ink">
             Забронировать номер напрямую
@@ -489,13 +489,13 @@ function Contacts() {
           </div>
           <a
             href="tel:+79372390022"
-            className="mt-9 inline-flex h-13 w-full items-center justify-center gap-2 rounded-full bg-accent px-7 text-sm font-bold text-white transition hover:bg-accent-dark active:translate-y-px sm:w-auto"
+            className="mt-9 inline-flex h-13 w-full items-center justify-center gap-2 rounded-[4px] bg-accent px-7 text-sm font-bold text-white transition hover:bg-accent-dark active:translate-y-px sm:w-auto"
           >
             <Phone className="h-4 w-4" />
             Позвонить администратору
           </a>
         </div>
-        <div className="relative min-h-[520px] overflow-hidden rounded-[36px] border border-line bg-white shadow-soft">
+        <div className="relative min-h-[520px] overflow-hidden rounded-[4px] border border-line bg-white shadow-soft">
           <Image
             src={assetPath("/generated/chaika-map.png")}
             alt="Маршрут к гостинице Чайка в центре Сызрани"
@@ -503,7 +503,7 @@ function Contacts() {
             sizes="(min-width: 1024px) 55vw, 100vw"
             className="object-cover"
           />
-          <div className="absolute bottom-6 left-6 right-6 rounded-[28px] bg-white/88 p-5 shadow-soft backdrop-blur">
+          <div className="absolute bottom-6 left-6 right-6 rounded-[4px] bg-white/88 p-5 shadow-soft backdrop-blur">
             <div className="text-sm font-bold text-accent">Ориентир</div>
             <div className="mt-1 text-xl font-bold text-ink">Ульяновская, 57</div>
             <p className="mt-2 text-sm leading-6 text-muted">
@@ -533,7 +533,7 @@ function Contact({
 
   return (
     <div className="flex gap-4">
-      <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-paper text-accent">
+      <span className="grid h-12 w-12 shrink-0 place-items-center rounded-[4px] bg-paper text-accent">
         <Icon className="h-5 w-5" />
       </span>
       <div>
@@ -547,7 +547,7 @@ function Contact({
 function Footer() {
   return (
     <footer className="bg-paper px-4 pb-8">
-      <div className="mx-auto flex max-w-7xl flex-col gap-5 rounded-[36px] border border-line bg-white p-7 text-ink shadow-soft md:flex-row md:items-center md:justify-between md:p-8">
+      <div className="mx-auto flex max-w-7xl flex-col gap-5 rounded-[4px] border border-line bg-white p-7 text-ink shadow-soft md:flex-row md:items-center md:justify-between md:p-8">
         <div>
           <div className="text-base font-bold">Гостиница «Чайка»</div>
           <p className="mt-2 max-w-md text-sm leading-6 text-muted">
