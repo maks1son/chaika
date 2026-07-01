@@ -2,10 +2,10 @@
 @import "tw-animate-css";
 
 :root {
-  --paper: #f7fbff;
-  --ink: #1f2933;
-  --muted: #66788a;
-  --line: #dbe8f3;
+  --paper: #ffffff;
+  --ink: #111315;
+  --muted: #66717a;
+  --line: #e3e9ef;
   --accent: #4b9fd8;
   --accent-dark: #2f7fb6;
   --white: #ffffff;
@@ -22,7 +22,7 @@
   --color-accent-dark: var(--accent-dark);
   --font-display: var(--font-cormorant);
   --font-body: var(--font-manrope);
-  --shadow-soft: 0 24px 70px rgb(47 127 182 / 0.10);
+  --shadow-soft: 0 24px 70px rgb(47 127 182 / 0.12);
 }
 
 * {
@@ -40,6 +40,14 @@ body {
   font-family: var(--font-manrope), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+
+.kicker {
+  color: #9b3940;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 a {
